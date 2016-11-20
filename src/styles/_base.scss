@@ -1,4 +1,17 @@
+$nav-height: 3rem;
+$background-color: #eaeaea;
+$navigation-color: #a994da;
+
 body {
-  background-color: #eaeaea;
+  background-color: $background-color;
+}
+nav {
+  @extend .navbar, .navbar-fixed-top, .navbar-light;
+  max-height: $nav-height;
+  background-color: $navigation-color;
+}
+main {
+  @extend .container-fluid;
+  margin-top: $nav-height;
 }
 
