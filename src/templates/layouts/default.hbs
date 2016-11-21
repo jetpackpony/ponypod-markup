@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div class="app">
+    <div class="app {{#if menuOpen}}menu-open{{/if}}">
       <aside>{{> menu}}</aside>
       <main>
         <nav>{{> nav}}</nav>
