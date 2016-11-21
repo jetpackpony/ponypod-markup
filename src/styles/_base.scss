@@ -9,6 +9,18 @@ nav {
   @extend .navbar, .navbar-fixed-top, .navbar-light;
   max-height: $nav-height;
   background-color: $navigation-color;
+
+  a .octicon {
+    height: 1.75rem;
+    color: #fff;
+  }
+
+  h1.navbar-brand {
+    margin-left: 1rem;
+    padding-top: 0.15rem;
+    margin-bottom: 0 !important;
+  }
+
 }
 main {
   @extend .container-fluid;
