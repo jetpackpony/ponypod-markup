@@ -1,6 +1,7 @@
 $nav-height: 3rem;
 $background-color: #eaeaea;
 $navigation-color: #a994da;
+$navigation-text-color: #fff;
 
 body {
   background-color: $background-color;
@@ -10,15 +11,17 @@ nav {
   max-height: $nav-height;
   background-color: $navigation-color;
 
-  a .octicon {
-    height: 1.75rem;
-    color: #fff;
+  a .material-icons {
+    color: $navigation-text-color;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 
   h1.navbar-brand {
     margin-left: 1rem;
     padding-top: 0.15rem;
     margin-bottom: 0 !important;
+    color: $navigation-text-color;
   }
 
 }
