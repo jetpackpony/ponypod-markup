@@ -3,7 +3,7 @@
 
   .podcast {
     @extend .col-xs-4, .col-md-3, .col-xl-2;
-    border: 1px solid $bg-color;
+    border: 1px solid $grey;
     padding: 0;
 
     img {

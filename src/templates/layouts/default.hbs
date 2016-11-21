@@ -13,7 +13,7 @@
     <div class="app {{#if menuOpen}}menu-open{{/if}}">
       <aside>{{> menu}}</aside>
       <main>
-        <div class="search-pane">
+        <div class="search-pane {{#if searchOpen}}{{else}}hidden{{/if}}">
           this is search
         </div>
         <nav>{{> nav}}</nav>

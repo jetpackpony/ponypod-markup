@@ -1,14 +1,14 @@
 nav {
   @extend .navbar, .navbar-light;
   max-height: $nav-height;
-  background-color: $nav-bg-color;
+  background-color: $base-color;
   border-radius: 0;
 
   &, h1.navbar-brand, h1.navbar-brand:hover, a {
-    color: $nav-text-color;
+    color: $white;
   }
   a:hover {
-    color: rgba($nav-text-color, .8);
+    color: rgba($white, .8);
   }
 
   a .material-icons {
