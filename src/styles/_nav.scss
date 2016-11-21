@@ -2,9 +2,16 @@ nav {
   @extend .navbar, .navbar-light;
   max-height: $nav-height;
   background-color: $nav-bg-color;
+  border-radius: 0;
+
+  &, h1.navbar-brand, h1.navbar-brand:hover, a {
+    color: $nav-text-color;
+  }
+  a:hover {
+    color: rgba($nav-text-color, .8);
+  }
 
   a .material-icons {
-    color: $nav-text-color;
     font-size: 1.75rem;
     line-height: 2rem;
   }
@@ -13,7 +20,5 @@ nav {
     margin-left: 1rem;
     padding-top: 0.15rem;
     margin-bottom: 0 !important;
-    color: $nav-text-color;
   }
-
 }

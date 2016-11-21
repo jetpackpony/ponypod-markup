@@ -44,6 +44,7 @@
 
   main {
     width: 100%;
+
     nav {
       position: absolute;
       width: 100%;
@@ -58,6 +59,16 @@
       bottom: 0;
       overflow-y: auto;
       overflow-x: hidden;
+    }
+
+    .search-pane {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      display: none;
     }
   }
 }
