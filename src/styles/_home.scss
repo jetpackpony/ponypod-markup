@@ -1,10 +1,14 @@
-.podcast {
-  @extend .col-xs-4, .col-md-3, .col-xl-2;
-  border: 1px solid $background-color;
-  padding: 0;
+.podcast-list {
+  margin: 0;
 
-  img {
-    width: 100%;
-    height: auto;
+  .podcast {
+    @extend .col-xs-4, .col-md-3, .col-xl-2;
+    border: 1px solid $bg-color;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

@@ -10,8 +10,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    {{> nav}}
-    {{> body }}
+    <div class="app">
+      <aside>{{> menu}}</aside>
+      <main>
+        <nav>{{> nav}}</nav>
+        <section class="content">{{> body}}</section>
+      </main>
+    </div>
     <script src="{{assets}}/js/bower.js"></script>
   </body>
 </html>

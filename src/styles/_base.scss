@@ -1,32 +1,14 @@
+$bg-color: #eaeaea;
+
 $nav-height: 3rem;
-$background-color: #eaeaea;
-$navigation-color: #a994da;
-$navigation-text-color: #fff;
+$nav-bg-color: #a994da;
+$nav-text-color: #fff;
+
+$menu-offset: 75%;
+$max-menu-offset: 25rem;
 
 body {
-  background-color: $background-color;
+  background-color: $bg-color;
 }
-nav {
-  @extend .navbar, .navbar-fixed-top, .navbar-light;
-  max-height: $nav-height;
-  background-color: $navigation-color;
 
-  a .material-icons {
-    color: $navigation-text-color;
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-
-  h1.navbar-brand {
-    margin-left: 1rem;
-    padding-top: 0.15rem;
-    margin-bottom: 0 !important;
-    color: $navigation-text-color;
-  }
-
-}
-main {
-  @extend .container-fluid;
-  margin-top: $nav-height;
-}
 

@@ -1,0 +1,63 @@
+@mixin set-menu-size($size) {
+  aside {
+    width: $size;
+    left: $size * -1;
+  }
+  main {
+    left: 0;
+  }
+
+  &.menu-open {
+    main {
+      left: $size;
+    }
+    aside {
+      left: 0;
+    }
+  }
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+
+  aside, main {
+    transition: left .3s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  aside {
+  }
+
+  @media (max-width: 30rem) {
+    @include set-menu-size($menu-offset);
+  }
+  @media (min-width: 30.1rem) {
+    @include set-menu-size($max-menu-offset);
+  }
+
+  main {
+    width: 100%;
+    nav {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: $nav-height;
+    }
+
+    .content {
+      position: absolute;
+      width: 100%;
+      top: $nav-height;
+      bottom: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
