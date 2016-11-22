@@ -1,4 +1,4 @@
-$nav-height: 3rem;
+$nav-height: 4rem;
 $menu-offset: 75%;
 $max-menu-offset: 25rem;
 
@@ -54,6 +54,10 @@ $max-menu-offset: 25rem;
       width: 100%;
       top: 0;
       height: $nav-height;
+
+      .nav {
+        padding-top: .5rem;
+      }
     }
 
     .content {

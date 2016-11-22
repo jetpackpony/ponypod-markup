@@ -4,7 +4,11 @@ nav {
   background-color: $base-color;
   border-radius: 0;
 
-  &, h1.navbar-brand, h1.navbar-brand:hover, a {
+  &,
+  h1.navbar-brand,
+  h1.navbar-brand:hover,
+  a,
+  a:visited {
     color: $white;
   }
   a:hover {
@@ -20,5 +24,18 @@ nav {
     margin-left: 1rem;
     padding-top: 0.15rem;
     margin-bottom: 0 !important;
+  }
+
+  .nav-search {
+    background-color: $base-color;
+    border: none;
+    border-bottom: 1px solid $grey;
+    color: $white;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+
+    &:focus, &:hover {
+      outline: none;
+    }
   }
 }

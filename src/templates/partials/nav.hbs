@@ -11,10 +11,19 @@
       </a>
     {{/if}}
   </div>
-  <h1 class="navbar-brand">{{navBarTitle}}</h1>
-  <div class="nav-item float-xs-right">
-    <a href="#" id="search">
-      <i class="material-icons">search</i>
-    </a>
-  </div>
+  {{#if searchOpen}}
+    <input class="nav-search" type="text" id="search-field" placeholder="Search podcasts">
+    <div class="nav-item float-xs-right">
+      <a href="#" id="search-close">
+        <i class="material-icons">close</i>
+      </a>
+    </div>
+  {{else}}
+    <h1 class="navbar-brand">{{navBarTitle}}</h1>
+    <div class="nav-item float-xs-right">
+      <a href="#" id="search">
+        <i class="material-icons">search</i>
+      </a>
+    </div>
+  {{/if}}
 </div>
