@@ -9,6 +9,18 @@ $orange: #DB3215;
 
 body {
   background-color: $grey;
+
+  a,
+  a:focus,
+  a:visited,
+  a:hover {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgba($dark-blue, .9);
+  }
 }
 
 
