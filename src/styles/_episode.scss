@@ -1,0 +1,81 @@
+.episode-full {
+  .info {
+    display: flex;
+    .title {
+      position: relative;
+      padding: .5rem;
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .dates {
+        color: rgba(0,0,0,.4);
+
+        .status.not-viewed {
+          &, i {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  .cover {
+
+  }
+  @include media-breakpoint-up(xs) {
+    img { height: $podcast-cover-xs-size; }
+  }
+  @include media-breakpoint-up(md) {
+    img { height: $podcast-cover-md-size; }
+  }
+
+  .action-buttons {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    margin: .5rem;
+
+    button {
+      outline: 0;
+      border-radius: .1rem;
+      text-transform: uppercase;
+      box-shadow: $materialize-shadow;
+      background-color: $orange;
+      color: $white;
+
+      i.material-icons {
+        color: $white;
+      }
+    }
+
+    button + button {
+      margin-left: 1rem;
+    }
+  }
+
+  .details {
+    margin: 0 .5rem;
+    padding-top: .5rem;
+    border-top: $border;
+
+    p {
+      margin-bottom: .5rem;
+    }
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0 .5rem 0;
+    }
+  }
+}
