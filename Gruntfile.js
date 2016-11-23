@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         tasks: ['assemble']
       },
       copy: {
-        files: ['<%= config.src %>/img/*'],
+        files: ['<%= config.src %>/img/*','<%= config.src %>/js/*'],
         tasks: ['copy']
       },
       livereload: {
@@ -118,6 +118,12 @@ module.exports = function(grunt) {
           cwd: '<%= config.src %>/img/',
           src: '**',
           dest: '<%= config.dist %>/assets/img/',
+          filter: 'isFile'
+        },{
+          expand: true,
+          cwd: '<%= config.src %>/js/',
+          src: '**',
+          dest: '<%= config.dist %>/assets/js/',
           filter: 'isFile'
         }]
       },
