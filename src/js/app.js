@@ -21,4 +21,9 @@ $(function() {
   $('.toggle-button').on('click', function() {
     $('.podcast-details').toggleClass('expanded');
   });
+
+  // Toggle options menu
+  $('#options-menu').on('click', function() {
+    $('.options-list').toggleClass('hidden');
+  });
 });

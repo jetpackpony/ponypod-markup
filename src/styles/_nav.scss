@@ -44,3 +44,38 @@ nav {
     margin-right: 1rem;
   }
 }
+
+.options-list {
+  position: fixed;
+  top: $nav-height;
+  right: 0;
+  width: 13rem;
+  transition: width .3s;
+  transition: height .3s;
+  box-shadow: $materialize-shadow;
+  background-color: $white;
+  color: $dark-blue;
+
+  &.hidden {
+    width: 0;
+    height: 0;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      padding: .5rem 1rem;
+      font-size: 1.2rem;
+
+      &:hover {
+        background-color: $grey;
+      }
+    }
+  }
+}
+
+

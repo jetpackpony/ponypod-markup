@@ -18,6 +18,12 @@
   {{/if}}
 
   <div class="nav-item float-xs-right">
+    <a href="#" id="options-menu">
+      <i class="material-icons">more_vert</i>
+    </a>
+  </div>
+
+  <div class="nav-item float-xs-right">
     {{#if searchOpen}}
       <a href="#" id="search-close">
         <i class="material-icons">close</i>
@@ -42,5 +48,12 @@
       </a>
     </div>
   {{/if}}
+</div>
 
+<div class="options-list hidden">
+  <ul>
+  {{#each options as |opt|}}
+    <li>{{opt}}</li>
+  {{/each}}
+  </ul>
 </div>
