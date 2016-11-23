@@ -12,9 +12,10 @@ $menu-open-speed: .3s;
 
 aside {
   transition: left $menu-open-speed;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
+  overflow: hidden;
   box-shadow: $shadow;
   z-index: 999;
   background-color: $bg;
