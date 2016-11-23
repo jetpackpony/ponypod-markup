@@ -38,4 +38,9 @@ nav {
       outline: none;
     }
   }
+
+  .navbar-nav .nav-item.float-xs-right + .nav-item.float-xs-right {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
 }

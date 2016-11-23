@@ -7,8 +7,10 @@ $dark-blue: #273142;
 $beige: #B36D50;
 $orange: #DB3215;
 
+$bg: $white;
+
 body {
-  background-color: $grey;
+  background-color: $bg;
 
   a,
   a:focus,

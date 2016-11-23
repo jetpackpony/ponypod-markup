@@ -1,9 +1,13 @@
+$expand-button-height: 1.5rem;
+$episode-line-height: 3rem;
+$border: 1px solid rgba(0,0,0,.2);
+
 @mixin set-initial-size($size) {
   img {
     height: $size;
   }
   & {
-    height: $size;
+    height: $size + $expand-button-height;
   }
   .toggle-button {
     left: $size + 1;
@@ -13,8 +17,9 @@
 .podcast-details {
   position: relative;
   overflow: hidden;
+  padding-bottom: $expand-button-height;
   img {
-    margin: 0 1rem 1rem 0;
+    margin: 0 1rem .5rem 0;
     float: left;
   }
   @include media-breakpoint-up(xs) {
@@ -23,21 +28,101 @@
   @include media-breakpoint-up(md) {
     @include set-initial-size(15rem);
   }
-
+  p {
+    margin-top: .6rem;
+  }
   &.expanded {
-    height: 75%;
-    overflow-y: auto;
-
+    height: auto;
     .toggle-button.expand {
       display: none;
     }
+    .toggle-button.collapse {
+      display: block;
+    }
   }
-
-  .toggle-button {
+  .toggle-button-container {
     position: absolute;
     bottom: 0;
+    height: $expand-button-height;
+    width: 100%;
+    text-align: center;
+    background-color: $bg;
+    border-top: $border;
+    border-bottom: $border;
+  }
+  .toggle-button.expand {
+    display: block;
   }
   .toggle-button.collapse {
     display: none;
   }
+}
+
+.episode-list {
+  .divider {
+    width: 98%;
+    margin: .3rem 1%;
+    text-align: center;
+    border-bottom: $border;
+  }
+
+  .episode-line {
+    width: 98%;
+    margin: auto;
+    height: $episode-line-height;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: $border;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($beige, .1);
+    }
+    a.play {
+      display: block;
+      height: $episode-line-height;
+      //width: $episode-line-height;
+      color: $orange;
+
+      i.material-icons {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+    }
+    .title {
+      padding-left: 1rem;
+      font-size: 1.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .air-date {
+      margin-left: auto;
+      margin-right: 1rem;
+      height: $episode-line-height;
+      width: $episode-line-height;
+      font-size: .6rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  }
+
+  .played-episodes {
+    .episode-line {
+      opacity: .5;
+    }
+    .episode-line:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.toggle-button:hover,
+.episode-line:hover {
+  background-color: rgba($beige, .1);
 }
