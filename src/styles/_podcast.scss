@@ -1,5 +1,5 @@
-$expand-button-height: 1.5rem;
-$episode-line-height: 3rem;
+$expand-button-height: 2rem;
+$episode-line-height: 4rem;
 $border: 1px solid rgba(0,0,0,.2);
 
 @mixin set-initial-size($size) {
@@ -64,6 +64,9 @@ $border: 1px solid rgba(0,0,0,.2);
     margin: .3rem 1%;
     text-align: center;
     border-bottom: $border;
+    color: rgba(128,128,128,.7);
+    font-size: .8rem;
+    font-weight: bold;
   }
 
   .episode-line {
@@ -76,6 +79,7 @@ $border: 1px solid rgba(0,0,0,.2);
     align-items: center;
     border-bottom: $border;
     cursor: pointer;
+    font-weight: bold;
 
     &:hover {
       background-color: rgba($beige, .1);
@@ -88,19 +92,19 @@ $border: 1px solid rgba(0,0,0,.2);
 
       i.material-icons {
         font-size: 2.5rem;
-        line-height: 3rem;
+        line-height: $episode-line-height;
       }
     }
     .title {
       padding-left: 1rem;
-      font-size: 1.2rem;
+      font-size: 1rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     .air-date {
       margin-left: auto;
-      margin-right: 1rem;
+      margin-right: 0;
       height: $episode-line-height;
       width: $episode-line-height;
       font-size: .6rem;
