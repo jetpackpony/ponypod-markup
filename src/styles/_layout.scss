@@ -3,6 +3,9 @@ $menu-offset: 75%;
 $max-menu-offset: 25rem;
 $menu-open-speed: .3s;
 
+$podcast-cover-xs-size: 8rem;
+$podcast-cover-md-size: 15rem;
+
 @mixin set-menu-size($size) {
   aside {
     width: $size;

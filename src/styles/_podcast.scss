@@ -1,6 +1,5 @@
 $expand-button-height: 2rem;
 $episode-line-height: 4rem;
-$border: 1px solid rgba(0,0,0,.2);
 
 @mixin set-initial-size($size) {
   img {
@@ -23,10 +22,10 @@ $border: 1px solid rgba(0,0,0,.2);
     float: left;
   }
   @include media-breakpoint-up(xs) {
-    @include set-initial-size(10rem);
+    @include set-initial-size($podcast-cover-xs-size);
   }
   @include media-breakpoint-up(md) {
-    @include set-initial-size(15rem);
+    @include set-initial-size($podcast-cover-md-size);
   }
   p {
     margin-top: .6rem;
