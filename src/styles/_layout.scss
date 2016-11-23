@@ -1,89 +1,80 @@
 $nav-height: 4rem;
 $menu-offset: 75%;
 $max-menu-offset: 25rem;
+$menu-open-speed: .3s;
 
 @mixin set-menu-size($size) {
   aside {
     width: $size;
     left: $size * -1 - 1;
   }
-  main {
-    left: 0;
-  }
+}
 
-  &.menu-open {
-    main {
-      left: $size;
-    }
-    aside {
-      left: 0;
-    }
+aside {
+  transition: left $menu-open-speed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  box-shadow: $shadow;
+  z-index: 999;
+  background-color: $bg;
+}
+
+@media (max-width: 30rem) {
+  @include set-menu-size($menu-offset);
+}
+@media (min-width: 30rem) {
+  @include set-menu-size($max-menu-offset);
+}
+@media (min-width: 70rem) {
+  aside {
+    left: 0 !important;
+  }
+  main {
+    margin-left: $max-menu-offset !important;
+  }
+  nav {
+    left: $max-menu-offset !important;
   }
 }
 
-.app {
-  position: absolute;
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: $nav-height;
+  box-shadow: $shadow;
+  z-index: 888;
+
+  .nav {
+    padding-top: .5rem;
+  }
+}
+
+main {
+  margin-top: $nav-height;
+}
+
+.shadow {
+  visibility: hidden;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  overflow: hidden;
+  opacity: 0;
+  transition: opacity $menu-open-speed;
+  background-color: black;
+  z-index: 889;
+}
 
-  aside, main {
-    transition: left .3s;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-
+body.menu-open {
   aside {
-    box-shadow: $shadow;
-    z-index: 999;
+    left: 0;
   }
-
-  @media (max-width: 30rem) {
-    @include set-menu-size($menu-offset);
-  }
-  @media (min-width: 30.1rem) {
-    @include set-menu-size($max-menu-offset);
-  }
-
-  main {
-    width: 100%;
-
-    nav {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      height: $nav-height;
-      box-shadow: $shadow;
-      z-index: 888;
-
-      .nav {
-        padding-top: .5rem;
-      }
-    }
-
-    .content {
-      position: absolute;
-      width: 100%;
-      top: $nav-height;
-      bottom: 0;
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
-
-    .search-pane {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 999;
-
-      &.hidden {
-        display: none;
-      }
-    }
+  .shadow {
+    visibility: visible;
+    opacity: .6;
   }
 }

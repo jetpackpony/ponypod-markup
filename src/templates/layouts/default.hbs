@@ -11,14 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{assets}}/css/app.css">
   </head>
-  <body>
-    <div class="app {{#if menuOpen}}menu-open{{/if}}">
-      <aside>{{> menu}}</aside>
-      <main>
-        <nav>{{> nav}}</nav>
-        <section class="content">{{> body}}</section>
-      </main>
-    </div>
+  <body class="{{#if menuOpen}}menu-open{{/if}}">
+    <div class="shadow"></div>
+    <aside>{{> menu}}</aside>
+    <nav>{{> nav}}</nav>
+    <main>{{> body}}</main>
     <script src="{{assets}}/js/bower.js"></script>
+    <script src="{{assets}}/js/app.js"></script>
   </body>
 </html>
