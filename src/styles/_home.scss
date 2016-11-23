@@ -5,10 +5,34 @@
     @extend .col-xs-4, .col-md-3, .col-xl-2;
     border: 1px solid $grey;
     padding: 0;
+    position: relative;
 
     img {
       width: 100%;
       height: auto;
+    }
+
+    .shadow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $menu-open-speed;
+      background-color: black;
+      z-index: 777;
+    }
+
+    &.all-viewed {
+      .shadow {
+        visibility: visible;
+        opacity: .5;
+      }
+      .shadow:hover {
+        opacity: 0;
+      }
     }
   }
 }
