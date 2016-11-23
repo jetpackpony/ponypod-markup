@@ -10,7 +10,6 @@
   }
 }
 aside {
-  background-color: $white;
 }
 .menu-section {
   a {
@@ -20,7 +19,7 @@ aside {
     font-weight: bold;
 
     &.selected, &:hover {
-      background-color: $grey;
+      background-color: rgba($beige, .1);
     }
   }
 }
