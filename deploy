@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd public
+cp home.html 200.html
+surge ./ ponypod-markup.surge.sh
