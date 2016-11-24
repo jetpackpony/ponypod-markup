@@ -17,13 +17,12 @@
     <nav>{{> nav}}</nav>
     <main>{{> body}}</main>
 
-    {{#if playerOpen}}
-      {{#if playerExpanded}}
-        <div class="player-expanded">{{> player-expanded}}</div>
-      {{else}}
-        <div class="player-collapsed">{{> player-collapsed}}</div>
-      {{/if}}
-    {{/if}}
+    <div id="player" class="
+        {{#if playerOpen}}{{else}}hidden{{/if}}
+        {{#if playerExpanded}}player-expanded{{else}}player-collapsed{{/if}}
+      ">
+      {{> player}}
+    </div>
 
     <script src="{{assets}}/js/bower.js"></script>
     <script src="{{assets}}/js/jquery-touch-swipe-drag.js"></script>

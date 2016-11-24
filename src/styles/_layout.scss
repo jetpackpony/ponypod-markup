@@ -6,6 +6,9 @@ $menu-open-speed: .3s;
 $podcast-cover-xs-size: 8rem;
 $podcast-cover-md-size: 15rem;
 
+$player-progress-height: .5rem;
+$episode-line-height: 4rem;
+
 @mixin set-menu-size($size) {
   aside {
     width: $size;
@@ -37,23 +40,35 @@ aside {
   main {
     margin-left: $max-menu-offset !important;
   }
-  nav {
+  nav, #player {
     left: $max-menu-offset !important;
   }
 }
 
-nav {
+nav, #player {
   position: fixed;
   left: 0;
-  top: 0;
   right: 0;
+  z-index: 888;
+}
+
+nav {
   height: $nav-height;
   box-shadow: $shadow;
-  z-index: 888;
+  top: 0;
+}
 
-  .nav {
-    padding-top: .5rem;
-  }
+#player {
+  box-shadow: $shadow-top;
+  bottom: 0;
+  transition: height .3s;
+  height: $player-progress-height + $episode-line-height;
+}
+#player.hidden {
+  height: 0;
+}
+#player.player-expanded {
+  height: calc(100% - #{$nav-height});
 }
 
 main {
