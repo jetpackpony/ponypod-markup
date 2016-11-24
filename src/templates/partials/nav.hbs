@@ -25,20 +25,6 @@
   </div>
   {{/if}}
 
-  {{#if navBarSearchButton}}
-    <div class="nav-item float-xs-right">
-      {{#if searchOpen}}
-        <a href="#" id="search-close">
-          <i class="material-icons">close</i>
-        </a>
-      {{else}}
-        <a href="#" id="search">
-          <i class="material-icons">search</i>
-        </a>
-      {{/if}}
-    </div>
-  {{/if}}
-
   {{#if navBarSubscribeButton}}
     <div class="nav-item float-xs-right">
       <a href="#" id="subscribe">
@@ -53,6 +39,21 @@
       </a>
     </div>
   {{/if}}
+
+  {{#if navBarSearchButton}}
+    <div class="nav-item float-xs-right">
+      {{#if searchOpen}}
+        <a href="#" id="search-close">
+          <i class="material-icons">close</i>
+        </a>
+      {{else}}
+        <a href="#" id="search">
+          <i class="material-icons">search</i>
+        </a>
+      {{/if}}
+    </div>
+  {{/if}}
+
 </div>
 
 {{#if options}}
