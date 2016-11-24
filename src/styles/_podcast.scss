@@ -69,13 +69,9 @@ $episode-line-height: 4rem;
   }
 
   .episode-line {
+    @extend .player-line;
     width: 98%;
     margin: auto;
-    height: $episode-line-height;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
     border-bottom: $border;
     cursor: pointer;
     font-weight: bold;
@@ -83,29 +79,7 @@ $episode-line-height: 4rem;
     &:hover {
       background-color: rgba($beige, .1);
     }
-    a.play {
-      display: block;
-      height: $episode-line-height;
-      //width: $episode-line-height;
-      color: $orange;
-
-      i.material-icons {
-        font-size: 2.5rem;
-        line-height: $episode-line-height;
-      }
-    }
-    .title {
-      padding-left: 1rem;
-      font-size: 1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .air-date {
-      margin-left: auto;
-      margin-right: 0;
-      height: $episode-line-height;
-      width: $episode-line-height;
+    .right-side {
       font-size: .6rem;
       text-align: center;
       display: flex;

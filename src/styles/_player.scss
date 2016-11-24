@@ -1,0 +1,61 @@
+.player-line {
+  height: $episode-line-height;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-weight: bold;
+
+  a.play {
+    display: block;
+    height: $episode-line-height;
+    color: $orange;
+
+    i.material-icons {
+      font-size: 2.5rem;
+      line-height: $episode-line-height;
+    }
+  }
+  .title {
+    padding-left: 1rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .right-side {
+    margin-left: auto;
+    margin-right: 0;
+    height: $episode-line-height;
+    width: $episode-line-height;
+  }
+}
+
+.player-collapsed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg;
+  box-shadow: $shadow-top;
+
+  .episode {
+    @extend .player-line;
+    .right-side img {
+      height: 100%;
+    }
+  }
+  .progress-bar {
+    height: .5rem;
+    background-color: rgba($beige, .2);
+    margin: 0;
+    width: 100%;
+
+    .bar {
+      width: 30%;
+      height: 100%;
+      background-color: $orange;
+    }
+  }
+
+}
