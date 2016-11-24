@@ -1,4 +1,4 @@
-.episode-full {
+._episode {
   .info {
     display: flex;
     .title {
@@ -21,15 +21,32 @@
       }
     }
   }
-  .cover {
-
-  }
   @include media-breakpoint-up(xs) {
     img { height: $podcast-cover-xs-size; }
   }
   @include media-breakpoint-up(md) {
     img { height: $podcast-cover-md-size; }
   }
+}
+._episode_details {
+  margin: 0 .5rem;
+  padding-top: .5rem;
+  border-top: $border;
+
+  p {
+    margin-bottom: .5rem;
+  }
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.episode-full {
+  @extend ._episode;
 
   .action-buttons {
     height: 3.5rem;
@@ -58,20 +75,7 @@
   }
 
   .details {
-    margin: 0 .5rem;
-    padding-top: .5rem;
-    border-top: $border;
-
-    p {
-      margin-bottom: .5rem;
-    }
-    a {
-      color: $blue;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    @extend ._episode_details;
     h1, h2, h3, h4, h5, h6 {
       font-size: 1.2rem;
       font-weight: bold;
