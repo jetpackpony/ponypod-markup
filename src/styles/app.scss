@@ -1,16 +1,8 @@
-@import "tether";
-@import "_variables";
-@import "bootstrap";
+// Materialize framework:
+@import "components/mixins";
+@import "components/color";
+@import "variables";
+@import "materialize";
 
-@import "_base";
-@import "_layout";
-@import "_nav";
-@import "_menu";
-
-@import "_home";
-@import "_podcast";
-@import "_episode";
-@import "_login";
-@import "_player-collapsed";
-@import "_player-expanded";
-
+// App css
+@import "base";

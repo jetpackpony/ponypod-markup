@@ -8,21 +8,15 @@
 
     <title>{{ title }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{assets}}/css/app.css">
   </head>
-  <body class="{{#if menuOpen}}menu-open{{/if}}">
-    <div class="shadow"></div>
-    <aside>{{> menu}}</aside>
-    <nav>{{> nav}}</nav>
+  <body>
+    <div id="body-shadow"></div>
+    <aside></aside>
+    <nav></nav>
     <main>{{> body}}</main>
 
-    <div id="player" class="
-        {{#if playerOpen}}{{else}}hidden{{/if}}
-        {{#if playerExpanded}}player-expanded{{else}}player-collapsed{{/if}}
-      ">
-      {{> player}}
-    </div>
+    <div id="player"></div>
 
     <script src="{{assets}}/js/bower.js"></script>
     <script src="{{assets}}/js/jquery-touch-swipe-drag.js"></script>

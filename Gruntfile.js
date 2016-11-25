@@ -23,6 +23,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     config: {
+      bower: 'bower_components',
       src: 'src',
       dist: 'public'
     },
@@ -30,8 +31,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           loadPath: [
-            "bower_components/bootstrap/scss/",
-            "bower_components/tether/src/css/"
+            '<%= config.bower %>/materialize/sass/'
           ]
         },
         files: [{
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
       },
       copy: {
         files: ['<%= config.src %>/img/*','<%= config.src %>/js/*'],
-        tasks: ['copy']
+        tasks: ['copy:main']
       },
       livereload: {
         options: {
@@ -127,6 +127,15 @@ module.exports = function(grunt) {
           filter: 'isFile'
         }]
       },
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.bower %>/materialize/fonts/',
+          src: '**',
+          dest: '<%= config.dist %>/assets/fonts/',
+          filter: 'isFile'
+        }]
+      }
     },
 
     // Before generating any new files,
@@ -152,7 +161,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'bower_concat',
-    'copy',
+    'copy:main',
+    'copy:fonts',
     'assemble',
     'sass'
   ]);
