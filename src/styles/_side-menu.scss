@@ -9,6 +9,33 @@ aside {
   z-index: 999;
   background-color: #fff;
   transition: left .3s;
+
+  header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    font-size: 1.75em;
+    border-bottom: 1px solid rgba(#000,.15);
+    color: color($secondary, "darken-4");
+  }
+
+  .nav li {
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover, &.active {
+      background-color: rgba(#000, .1);
+    }
+    a {
+      display: block;
+      color: rgba(#000, .87);
+    }
+  }
+
 }
 
 #body-shadow {
