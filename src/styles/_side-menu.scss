@@ -11,13 +11,18 @@ aside {
   transition: left .3s;
 
   header {
-    height: 56px;
+    height: $navbar-height-mobile;
     display: flex;
     align-items: center;
     padding-left: 2rem;
     font-size: 1.75em;
     border-bottom: 1px solid rgba(#000,.15);
     color: color($secondary, "darken-4");
+  }
+  @media #{$medium-and-up} {
+    header {
+      height: $navbar-height;
+    }
   }
 
   .nav li {
