@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{assets}}/css/app.css">
   </head>
-  <body>
+  <body {{#if menuOpen}}class="menu-open"{{/if}}>
     <div id="body-shadow"></div>
-    <aside></aside>
+    {{> side-menu}}
     {{> nav}}
     <main>{{> body}}</main>
 

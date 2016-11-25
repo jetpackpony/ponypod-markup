@@ -1,0 +1,36 @@
+aside {
+  @extend .z-depth-4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: $side-menu-width * -1 - 1;
+  width: 75%;
+  max-width: $side-menu-width;
+  z-index: 999;
+  background-color: #fff;
+  transition: left .3s;
+}
+
+#body-shadow {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  transition: opacity .3s;
+  background-color: rgba(#000, .5);
+  opacity: 0;
+  cursor: pointer;
+}
+
+body.menu-open {
+  #body-shadow {
+    visibility: visible;
+    opacity: 1;
+  }
+  aside {
+    left: 0;
+  }
+}
