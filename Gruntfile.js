@@ -28,19 +28,14 @@ module.exports = function(grunt) {
       dist: 'public'
     },
     sass: {
+      options: {
+        includePaths: [ '<%= config.bower %>/materialize/sass/' ],
+        sourceMap: true
+      },
       dist: {
-        options: {
-          loadPath: [
-            '<%= config.bower %>/materialize/sass/'
-          ]
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= config.src %>/styles',
-          src: ['*.scss'],
-          dest: '<%= config.dist %>/assets/css',
-          ext: '.css'
-        }]
+        files: {
+          '<%= config.dist %>/assets/css/app.css': '<%= config.src %>/styles/app.scss'
+        }
       }
     },
     watch: {
@@ -148,7 +143,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
