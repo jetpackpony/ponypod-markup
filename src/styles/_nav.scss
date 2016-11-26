@@ -15,6 +15,9 @@ nav {
       .left-side {
         display: none;
       }
+      .right-side {
+        width: 100%;
+      }
       .nav-search {
         display: block;
       }
@@ -22,14 +25,19 @@ nav {
   }
   .left-side, .right-side {
     display: flex;
+    width: 50%;
   }
   .right-side {
-    width: 100%;
     justify-content: flex-end;
   }
   .nav-item a {
     display: block;
     padding: 0 15px;
+  }
+  .nav-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .nav-search {
     width: 100%;
