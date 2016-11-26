@@ -33,4 +33,13 @@ $(function() {
   });
 
 
+  /*
+   * Options menu things
+   */
+  $('#toggle-options').on('click', function() {
+    $('.options-container').toggleClass('hidden');
+  });
+  $('.options-container li').on('click', function() {
+    $('.options-container').toggleClass('hidden');
+  });
 });

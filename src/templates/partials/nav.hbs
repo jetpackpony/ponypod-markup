@@ -28,6 +28,22 @@
         <i id="close-search" class="material-icons">close</i>
       </div>
       {{/if}}
+      {{#if options}}
+        <div class="nav-item">
+          <a href="#" id="toggle-options">
+            <i class="material-icons">more_vert</i>
+          </a>
+        </div>
+      {{/if}}
     </div>
   </div>
 </nav>
+{{#if options}}
+<div class="options-container hidden">
+  <ul>
+    {{#each options as |option|}}
+      <li><a href="#">{{option}}</a></li>
+    {{/each}}
+  </ul>
+</div>
+{{/if}}
