@@ -4,6 +4,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 777;
 
   .nav-wrapper {
     display: flex;
@@ -97,6 +98,7 @@ nav {
   background: #fff;
   max-width: 50%;
   min-width: 30%;
+  z-index: 888;
   ul {
     margin: 0;
     li {
