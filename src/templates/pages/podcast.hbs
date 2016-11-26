@@ -1,0 +1,16 @@
+---
+title: <%= podcast.title %>
+navBarTitle: <%= podcast.title %>
+
+navBarMenuButton: false
+navBarArrowButton: true
+navBarSearch: true
+
+menuOpen: false
+playerOpen: false
+
+options:
+- subscribe
+- unsubscribe
+---
+{{> podcast-details podcast=podcast}}

@@ -42,4 +42,14 @@ $(function() {
   $('.options-container li').on('click', function() {
     $('.options-container').toggleClass('hidden');
   });
+
+
+  /*
+   * Podcast page
+   */
+  $('#read-more, #read-less').click(function() {
+    $('.podcast-description').toggleClass('full-description');
+    $('.podcast-action').toggleClass('full-description');
+  });
+
 });

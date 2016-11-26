@@ -27,5 +27,11 @@
     "hi.png",
     "serial.png",
     "sysk.jpg"
-  ]
+  ],
+  "podcast": {
+    "title": "Hello Internet",
+    "cover": "hi.png",
+    "summary": "CGP Grey and Brady Haran talk about YouTube, life, work, whatever.",
+    "description": "CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever."
+  }
 }
