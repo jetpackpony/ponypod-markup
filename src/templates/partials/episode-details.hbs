@@ -1,0 +1,26 @@
+<div class="episode-details">
+  <div class="card-image">
+    <img src="{{assets}}/img/{{podcast.cover}}">
+    <a class="play-button play waves-effect waves-light">
+      <i class="material-icons">play_arrow</i>
+    </a>
+    <a class="play-button pause waves-effect waves-light hidden">
+      <i class="material-icons">pause</i>
+    </a>
+  </div>
+  <div class="card-content">
+    <h2>{{episode.title}}</h2>
+    <div class="secondary">
+      <div class="date">{{episode.date}}</div>
+      <div class="{{#if episode.viewed}}old{{else}}new{{/if}}">
+        <i class="material-icons">
+          {{#if episode.viewed}}check{{else}}new_releases{{/if}}
+        </i>
+        {{#if episode.viewed}}played{{else}}new episode{{/if}}
+      </div>
+    </div>
+    <div class="description">
+      {{{episode.description}}}
+    </div>
+  </div>
+</div>

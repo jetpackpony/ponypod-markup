@@ -1,15 +1,19 @@
+.fab-button {
+  @extend .btn-floating, .btn-large, .z-depth-4;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: $secondary-color;
+  &.hidden { display: none; }
+}
+
 .podcast-details {
   @extend .card;
   .card-image {
     position: relative;
     .subscribe-button {
-      @extend .btn-floating, .btn-large, .z-depth-4;
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      &.subscribe { background-color: $secondary-color; }
+      @extend .fab-button;
       &.unsubscribe { background-color: $success-color; }
-      &.hidden { display: none; }
     }
 
   }

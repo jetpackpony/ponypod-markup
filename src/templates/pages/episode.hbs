@@ -1,0 +1,23 @@
+---
+title: <%= episode.title %>
+navBarTitle: <%= podcast.title %>
+
+navBarMenuButton: false
+navBarArrowButton: true
+navBarSearch: true
+
+menuOpen: false
+playerOpen: false
+
+options:
+- subscribe
+- unsubscribe
+- mark as played
+- mark as new
+
+---
+<div class="row">
+  <div class="col s12">
+    {{> episode-details episode=episode}}
+  </div>
+</div>

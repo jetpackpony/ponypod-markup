@@ -83,4 +83,7 @@ $(function() {
     $('.subscribe-button').toggleClass('hidden');
   });
 
+  $('.episode-details .play-button').click(function() {
+    $(this.parentElement).find('.play-button').toggleClass("hidden");
+  });
 });
