@@ -37,10 +37,11 @@ $(function() {
    * Options menu things
    */
   $('#toggle-options').on('click', function() {
-    $('.options-container').toggleClass('hidden');
+    $('.options-container').addClass('hidden');
+    $('#global-options').removeClass('hidden');
   });
   $('.options-container li').on('click', function() {
-    $('.options-container').toggleClass('hidden');
+    $('.options-container').addClass('hidden');
   });
 
 

@@ -39,11 +39,5 @@
   </div>
 </nav>
 {{#if options}}
-<div class="options-container hidden">
-  <ul>
-    {{#each options as |option|}}
-      <li><a href="#">{{option}}</a></li>
-    {{/each}}
-  </ul>
-</div>
+  {{> options-menu id="global-options" options=options}}
 {{/if}}
