@@ -3,11 +3,13 @@
   .card-image {
     position: relative;
     .subscribe-button {
-      @extend .btn-floating, .btn-large;
+      @extend .btn-floating, .btn-large, .z-depth-4;
       position: absolute;
       bottom: 1rem;
       right: 1rem;
-      background-color: $secondary-color;
+      &.subscribe { background-color: $secondary-color; }
+      &.unsubscribe { background-color: $success-color; }
+      &.hidden { display: none; }
     }
 
   }

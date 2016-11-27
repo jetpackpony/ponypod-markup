@@ -62,4 +62,25 @@ $(function() {
     $(this.parentElement).find('.episode-options').removeClass('hidden');
   });
 
+  var subscribe = $('.subscribe-button.subscribe');
+  var unsubscribe = $('.subscribe-button.unsubscribe');
+  subscribe.tooltip({
+    delay: 50,
+    tooltip: "Add to My Podcasts",
+    position: "left"
+  });
+  unsubscribe.tooltip({
+    delay: 50,
+    tooltip: "Remove from My Podcasts",
+    position: "left"
+  });
+  subscribe.click(function() {
+    Materialize.toast('Added to My Podcasts', 4000);
+    $('.subscribe-button').toggleClass('hidden');
+  });
+  unsubscribe.click(function() {
+    Materialize.toast('Removed from My Podcasts', 4000);
+    $('.subscribe-button').toggleClass('hidden');
+  });
+
 });
