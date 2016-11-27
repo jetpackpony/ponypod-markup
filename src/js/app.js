@@ -53,4 +53,13 @@ $(function() {
     $('.podcast-action').toggleClass('full-description');
   });
 
+  $('.collection-item .play-button').click(function() {
+    $(this.parentElement).find('.play-button').toggleClass("hidden");
+  });
+
+  $('.secondary-content').click(function() {
+    $('.episode-options').addClass('hidden');
+    $(this.parentElement).find('.episode-options').removeClass('hidden');
+  });
+
 });

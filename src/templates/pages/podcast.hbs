@@ -12,5 +12,31 @@ playerOpen: false
 options:
 - subscribe
 - unsubscribe
+
+newEpisodeOptions:
+- mark played
+
+playedEpisodeOptions:
+- mark new
 ---
-{{> podcast-details podcast=podcast}}
+<div class="row">
+  <div class="col s12">
+    {{> podcast-details podcast=podcast}}
+  </div>
+  <div class="col s12">
+    {{> episode-list
+    title="New Episodes"
+    dimmed=false
+    episodes=podcast.new-episodes
+    episodeOptions=newEpisodeOptions
+    }}
+  </div>
+  <div class="col s12">
+    {{> episode-list
+    title="Played Episodes"
+    dimmed=true
+    episodes=podcast.played-episodes
+    episodeOptions=playedEpisodeOptions
+    }}
+  </div>
+</div>

@@ -11,7 +11,14 @@
 @import "side-menu";
 @import "podcast-grid";
 @import "podcast-details";
+@import "episode-list";
 
 body {
   background-color: rgba(#000,.1);
+}
+.row .col {
+  padding: 0;
+}
+.material-icons {
+  vertical-align: middle;
 }

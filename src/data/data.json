@@ -32,6 +32,56 @@
     "title": "Hello Internet",
     "cover": "hi.png",
     "summary": "CGP Grey and Brady Haran talk about YouTube, life, work, whatever.",
-    "description": "CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever."
+    "description": "CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever. CGP Grey and Brady Haran talk about YouTube, life, work, whatever.",
+    "new-episodes": [{
+        "title": "H.I. #73: Unofficial Official",
+        "date": "22 Nov 2016"
+      },{
+        "title": "H.I. #72: 64 Pairs of Underwear",
+        "date": "31 Oct 2016"
+      },{
+        "title": "H.I. #71: Trolley Problem",
+        "date": "28 Oct 2016"
+      },{
+        "title": "H.I. #70: Bun Fight",
+        "date": "30 Sep 2016"
+      },{
+        "title": "H.I. #69: Ex_Machina",
+        "date": "17 Sep 2016"
+    }],
+    "played-episodes": [{
+        "title": "H.I. #73: Unofficial Official",
+        "date": "22 Nov 2016"
+      },{
+        "title": "H.I. #72: 64 Pairs of Underwear",
+        "date": "31 Oct 2016"
+      },{
+        "title": "H.I. #71: Trolley Problem",
+        "date": "28 Oct 2016"
+      },{
+        "title": "H.I. #70: Bun Fight",
+        "date": "30 Sep 2016"
+      },{
+        "title": "H.I. #72: 64 Pairs of Underwear",
+        "date": "31 Oct 2016"
+      },{
+        "title": "H.I. #71: Trolley Problem",
+        "date": "28 Oct 2016"
+      },{
+        "title": "H.I. #70: Bun Fight",
+        "date": "30 Sep 2016"
+      },{
+        "title": "H.I. #72: 64 Pairs of Underwear",
+        "date": "31 Oct 2016"
+      },{
+        "title": "H.I. #71: Trolley Problem",
+        "date": "28 Oct 2016"
+      },{
+        "title": "H.I. #70: Bun Fight",
+        "date": "30 Sep 2016"
+      },{
+        "title": "H.I. #69: Ex_Machina",
+        "date": "17 Sep 2016"
+    }]
   }
 }
