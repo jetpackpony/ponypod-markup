@@ -6,6 +6,7 @@
 
 // App css
 @import "settings";
+@import "common";
 @import "nav";
 @import "options-menu";
 @import "side-menu";
@@ -14,13 +15,3 @@
 @import "episode-details";
 @import "episode-list";
 @import "mini-player";
-
-body {
-  background-color: rgba(#000,.1);
-}
-.row .col {
-  padding: 0;
-}
-.material-icons {
-  vertical-align: middle;
-}

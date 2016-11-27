@@ -1,0 +1,18 @@
+body {
+  background-color: rgba(#000,.1);
+}
+.row .col {
+  padding: 0;
+}
+.material-icons {
+  vertical-align: middle;
+}
+.fab-button {
+  @extend .btn-floating, .btn-large, .z-depth-4;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: $secondary-color;
+  &.hidden { display: none; }
+}
+
