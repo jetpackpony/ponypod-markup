@@ -1,5 +1,16 @@
 .podcast-details {
   @extend .card;
+  .card-image {
+    position: relative;
+    .subscribe-button {
+      @extend .btn-floating, .btn-large;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background-color: $secondary-color;
+    }
+
+  }
   .card-action {
     text-align: center;
     a#read-more, a#read-less {
