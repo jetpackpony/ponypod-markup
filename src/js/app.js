@@ -15,7 +15,6 @@ $(function() {
    * Side-menu JS
    */
   $(document).swipe(function(e, dx, dy) {
-    console.log("swipe");
     if (Math.abs(dx) < Math.abs(dy) * 10 ) {
       return;
     }
@@ -90,5 +89,66 @@ $(function() {
   $('#player .title, #player .expand-button, #player .collapse-button').click(function() {
     $('#player').toggleClass('maxi');
     $('#player').toggleClass('mini');
+  });
+
+  /*
+   * Progress slider
+   */
+  var progressWidth = $('.progress-container').width();
+  var thumbHalf = $(".thumb")[0].offsetHeight / 2;
+  var lastPosition;
+  var calcPercent = function(newPos) {
+    var pos = (newPos / progressWidth * 100);
+    pos = (pos > 100) ? 100 : pos;
+    pos = (pos < 0) ? 0 : pos;
+    return pos + "%";
+  };
+  var moveProgress = function(newPos, moveThumb) {
+    $('.progress .determinate').css('width', newPos);
+    if (moveThumb) {
+      $('.thumb').css('left', 'calc(' + newPos +' - ' + thumbHalf + 'px)');
+    }
+    lastPosition = newPos;
+  };
+  var rewindAudio = function() {
+    console.log('rewind to position', lastPosition);
+  };
+
+  // Mouse/Touch click event
+  $('.progress-wrapper').click(function(e) {
+    if (e.type === "click") {
+      moveProgress(calcPercent(e.offsetX), true);
+      rewindAudio();
+    }
+  });
+
+  // Mouse drag events
+  var onMouseMove = function(e) {
+    moveProgress(calcPercent(e.pageX), true);
+  };
+  var onMouseUp = function(e) {
+    rewindAudio();
+    $('.thumb').removeClass('focus');
+    $(document).unbind('mousemove', onMouseMove);
+    $(document).unbind('mouseup', onMouseUp);
+  };
+  $('.thumb').on('mousedown', function(e) {
+    $(this).addClass('focus');
+    $(document).on('mousemove', onMouseMove);
+    $(document).on('mouseup', onMouseUp);
+  });
+
+  // Touch drag events
+  var startOffset;
+  $('.thumb').on('touchstart', function(e) {
+    startOffset = e.touches[0].pageX - $(this).offset().left;
+    $(this).addClass('focus');
+  });
+  $('.thumb').on('touchmove', function(e) {
+    moveProgress(calcPercent(e.touches[0].pageX - startOffset), true);
+  });
+  $('.thumb').on('touchend', function() {
+    rewindAudio();
+    $(this).removeClass('focus');
   });
 });
