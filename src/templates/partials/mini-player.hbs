@@ -1,22 +1,27 @@
 <div class="mini-player">
-  <div class="control">
-    <a href="#!" class="play-button">
-      <i class="material-icons">play_arrow</i>
-    </a>
-    <a href="#!" class="play-button hidden">
-      <i class="material-icons">pause</i>
-    </a>
+  <div class="mini-progress">
+    <div class="bar"></div>
   </div>
-  <div class="title">
-    {{episode.title}}
-    {{episode.title}}
-    {{episode.title}}
-    <p class="secondary">{{episode.date}}</span>
+  <div class="mini-wrapper">
+    <div class="control">
+      <a href="#!" class="play-button">
+        <i class="material-icons">play_arrow</i>
+      </a>
+      <a href="#!" class="play-button hidden">
+        <i class="material-icons">pause</i>
+      </a>
+    </div>
+    <div class="title">
+      {{episode.title}}
+      {{episode.title}}
+      {{episode.title}}
+      <p class="secondary">{{episode.date}}</span>
+    </div>
+    <div class="expand-button">
+      <a href="#!" class="expand-player">
+        <i class="material-icons">expand_less</i>
+      </a>
+    </div>
+    <div class="logo"><img src="{{assets}}/img/{{podcast.cover}}"></div>
   </div>
-  <div class="expand-button">
-    <a href="#!" class="expand-player">
-      <i class="material-icons">expand_less</i>
-    </a>
-  </div>
-  <div class="logo"><img src="{{assets}}/img/{{podcast.cover}}"></div>
 </div>

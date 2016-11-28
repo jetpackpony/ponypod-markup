@@ -24,7 +24,7 @@
     }
   }
   &.mini {
-    height: $navbar-height-mobile;
+    height: $navbar-height-mobile + $mini-progress-height;
     .mini-player {
       display: flex;
     }
