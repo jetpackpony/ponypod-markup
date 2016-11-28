@@ -108,20 +108,16 @@ $(function() {
   /*
    * Progress slider
    */
-  var progressWidth = $('.progress-container').width();
-  var thumbHalf = $(".thumb")[0].offsetHeight / 2;
   var lastPosition;
   var calcPercent = function(newPos) {
-    var pos = (newPos / progressWidth * 100);
+    var pos = (newPos / $('.progress-container').width() * 100);
     pos = (pos > 100) ? 100 : pos;
     pos = (pos < 0) ? 0 : pos;
     return pos + "%";
   };
-  var moveProgress = function(newPos, moveThumb) {
+  var moveProgress = function(newPos) {
     $('.progress .determinate').css('width', newPos);
-    if (moveThumb) {
-      $('.thumb').css('left', 'calc(' + newPos +' - ' + thumbHalf + 'px)');
-    }
+    $('.thumb').css('left', 'calc(' + newPos +' - ' + $(".thumb")[0].offsetHeight / 2 + 'px)');
     lastPosition = newPos;
   };
   var rewindAudio = function() {
@@ -131,14 +127,14 @@ $(function() {
   // Mouse/Touch click event
   $('.progress-wrapper').click(function(e) {
     if (e.type === "click") {
-      moveProgress(calcPercent(e.offsetX), true);
+      moveProgress(calcPercent(e.offsetX));
       rewindAudio();
     }
   });
 
   // Mouse drag events
   var onMouseMove = function(e) {
-    moveProgress(calcPercent(e.pageX), true);
+    moveProgress(calcPercent(e.pageX));
   };
   var onMouseUp = function(e) {
     rewindAudio();
@@ -160,7 +156,7 @@ $(function() {
     $(this).addClass('focus');
   });
   $('.thumb').on('touchmove', function(e) {
-    moveProgress(calcPercent(e.touches[0].pageX - startOffset), true);
+    moveProgress(calcPercent(e.touches[0].pageX - startOffset));
   });
   $('.thumb').on('touchend', function() {
     rewindAudio();
