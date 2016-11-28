@@ -17,6 +17,7 @@
       margin-bottom: 3rem;
     }
     img {
+      @extend .z-depth-2;
       max-width: 210px;
       margin-bottom: 1rem;
     }
