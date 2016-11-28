@@ -10,15 +10,15 @@
   z-index: 998;
 
   &.hidden {
-    visibility: hidden;
+    display: none;
     height: 0;
+  }
+  .mini-player, .maxi-player {
+    display: none;
   }
 
   &.maxi {
     height: calc(100% - 6rem);
-    .mini-player {
-      display: none;
-    }
     .maxi-player {
       display: block;
     }
@@ -27,9 +27,6 @@
     height: $navbar-height-mobile;
     .mini-player {
       display: flex;
-    }
-    .maxi-player {
-      display: none;
     }
   }
 }
