@@ -1,9 +1,4 @@
-<div id="player">
-  {{#if miniPlayer}}
-    {{> mini-player}}
-  {{/if}}
-
-  {{#if maxiPlayer}}
-    {{> maxi-player}}
-  {{/if}}
+<div id="player" class="{{#if miniPlayer}}mini{{/if}} {{#if maxiPlayer}}maxi{{/if}}">
+  {{> mini-player}}
+  {{> maxi-player}}
 </div>

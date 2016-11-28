@@ -53,7 +53,7 @@ $(function() {
     $('.podcast-action').toggleClass('full-description');
   });
 
-  $('.collection-item .play-button').click(function() {
+  $('.play-button').click(function() {
     $(this.parentElement).find('.play-button').toggleClass("hidden");
   });
 
@@ -83,7 +83,12 @@ $(function() {
     $('.subscribe-button').toggleClass('hidden');
   });
 
-  $('.episode-details .play-button').click(function() {
-    $(this.parentElement).find('.play-button').toggleClass("hidden");
+
+  /*
+   * Player things
+   */
+  $('#player .title, #player .expand-button, #player .collapse-button').click(function() {
+    $('#player').toggleClass('maxi');
+    $('#player').toggleClass('mini');
   });
 });

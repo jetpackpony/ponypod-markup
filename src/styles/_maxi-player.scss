@@ -1,1 +1,23 @@
-/* */
+#player {
+  .maxi-player {
+    header {
+      display: flex;
+      justify-content: space-between;
+      .title {
+        h2 {
+          margin: .5rem 0;
+          font-size: 2rem;
+        }
+        .secondary {
+          color: rgba(0,0,0,.54);
+        }
+      }
+      .collapse-button {
+        i {
+          font-size: 3.5rem;
+        }
+      }
+
+    }
+  }
+}
