@@ -20,7 +20,7 @@
   &.maxi {
     height: calc(100% - 6rem);
     .maxi-player {
-      display: block;
+      display: flex;
     }
   }
   &.mini {

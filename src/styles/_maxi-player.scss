@@ -2,6 +2,9 @@ $thumb-outer-size: 3rem;
 $thumb-inner-size: 1rem;
 
 .maxi-player {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   header {
     display: flex;
     justify-content: space-between;
@@ -24,6 +27,15 @@ $thumb-inner-size: 1rem;
   }
   .description {
     padding: 0 1rem;
+    p {
+      max-height: 8rem;
+      overflow: hidden;
+    }
+    @media (max-height: 35rem) {
+      p {
+        display: none;
+      }
+    }
     .actions {
       text-align: center;
       .btn-flat {
