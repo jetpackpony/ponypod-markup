@@ -112,4 +112,20 @@ $thumb-inner-size: 1rem;
       }
     }
   }
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      @extend .icon-button;
+      color: $secondary-color;
+      margin: 1rem;
+      transition: background-color .3s;
+      i { font-size: 3rem; }
+      &.play {
+        i { font-size: 5rem; }
+      }
+    }
+  }
 }
