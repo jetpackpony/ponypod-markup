@@ -14,8 +14,10 @@ $(function() {
   /*
    * Side-menu JS
    */
-  $(document).swipe(function(e, dx, dy) {
-    if (Math.abs(dx) < Math.abs(dy) * 10 ) {
+  var startTouch;
+  var onTouchMove = function(e) {
+    var dx = e.touches[0].pageX - startTouch;
+    if (Math.abs(dx) < 50) {
       return;
     }
     if(dx < 0){
@@ -23,7 +25,19 @@ $(function() {
     } else {
       $('body').addClass('menu-open');
     }
+  };
+  var onTouchEnd = function() {
+    $('body').unbind('touchmove', onTouchMove);
+    $('body').unbind('touchend', onTouchEnd);
+  };
+  $('body').on('touchstart', function(e) {
+    if (e.touches[0].pageX < 50) {
+      startTouch = e.touches[0].pageX;
+      $('body').on('touchmove', onTouchMove);
+      $('body').on('touchend', onTouchEnd);
+    }
   });
+
   $('#body-shadow').on('click', function() {
     $('body').removeClass('menu-open');
   });
@@ -141,6 +155,7 @@ $(function() {
   // Touch drag events
   var startOffset;
   $('.thumb').on('touchstart', function(e) {
+    e.stopPropagation();
     startOffset = e.touches[0].pageX - $(this).offset().left;
     $(this).addClass('focus');
   });
