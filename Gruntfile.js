@@ -18,29 +18,25 @@
 module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
+  require('jit-grunt')(grunt);
 
   // Project configuration.
   grunt.initConfig({
 
     config: {
+      bower: 'bower_components',
       src: 'src',
       dist: 'public'
     },
     sass: {
+      options: {
+        includePaths: [ '<%= config.bower %>/materialize/sass/' ],
+        sourceMap: true
+      },
       dist: {
-        options: {
-          loadPath: [
-            "bower_components/bootstrap/scss/",
-            "bower_components/tether/src/css/"
-          ]
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= config.src %>/styles',
-          src: ['*.scss'],
-          dest: '<%= config.dist %>/assets/css',
-          ext: '.css'
-        }]
+        files: {
+          '<%= config.dist %>/assets/css/app.css': '<%= config.src %>/styles/app.scss'
+        }
       }
     },
     watch: {
@@ -57,7 +53,7 @@ module.exports = function(grunt) {
       },
       copy: {
         files: ['<%= config.src %>/img/*','<%= config.src %>/js/*'],
-        tasks: ['copy']
+        tasks: ['copy:main']
       },
       livereload: {
         options: {
@@ -127,6 +123,15 @@ module.exports = function(grunt) {
           filter: 'isFile'
         }]
       },
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.bower %>/materialize/fonts/',
+          src: '**',
+          dest: '<%= config.dist %>/assets/fonts/',
+          filter: 'isFile'
+        }]
+      }
     },
 
     // Before generating any new files,
@@ -134,14 +139,6 @@ module.exports = function(grunt) {
     clean: ['<%= config.dist %>/**/*.{html,xml}']
 
   });
-
-  grunt.loadNpmTasks('grunt-assemble');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-bower-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('server', [
     'build',
@@ -152,7 +149,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'bower_concat',
-    'copy',
+    'copy:main',
+    'copy:fonts',
     'assemble',
     'sass'
   ]);

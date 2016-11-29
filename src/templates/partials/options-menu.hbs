@@ -1,0 +1,7 @@
+<div {{#if id}}id="{{id}}"{{/if}} class="{{#if class}}{{class}} {{/if}}options-container hidden">
+  <ul>
+    {{#each options as |option|}}
+      <li><a href="#!">{{option}}</a></li>
+    {{/each}}
+  </ul>
+</div>

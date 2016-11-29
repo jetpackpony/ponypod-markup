@@ -4,28 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#2198A8">
+    <meta name="theme-color" content="#006064">
 
     <title>{{ title }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{assets}}/css/app.css">
   </head>
   <body class="{{#if menuOpen}}menu-open{{/if}}">
-    <div class="shadow"></div>
-    <aside>{{> menu}}</aside>
-    <nav>{{> nav}}</nav>
+    <div id="body-shadow"></div>
+    {{> side-menu}}
+    {{> nav}}
     <main>{{> body}}</main>
-
-    <div id="player" class="
-        {{#if playerOpen}}{{else}}hidden{{/if}}
-        {{#if playerExpanded}}player-expanded{{else}}player-collapsed{{/if}}
-      ">
-      {{> player}}
-    </div>
+    {{> player}}
 
     <script src="{{assets}}/js/bower.js"></script>
-    <script src="{{assets}}/js/jquery-touch-swipe-drag.js"></script>
     <script src="{{assets}}/js/app.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
-{{#if playerExpanded}}
-  {{> player-expanded}}
-{{else}}
-  {{> player-collapsed}}
-{{/if}}
+<div id="player" class="{{#if miniPlayer}}mini{{/if}} {{#if maxiPlayer}}maxi{{/if}}">
+  {{> mini-player}}
+  {{> maxi-player}}
+</div>

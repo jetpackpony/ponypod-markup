@@ -1,16 +1,20 @@
-@import "tether";
-@import "_variables";
-@import "bootstrap";
+// Materialize framework:
+@import "components/mixins";
+@import "components/color";
+@import "variables";
+@import "materialize";
 
-@import "_base";
-@import "_layout";
-@import "_nav";
-@import "_menu";
-
-@import "_home";
-@import "_podcast";
-@import "_episode";
-@import "_login";
-@import "_player-collapsed";
-@import "_player-expanded";
-
+// App css
+@import "settings";
+@import "common";
+@import "nav";
+@import "options-menu";
+@import "side-menu";
+@import "podcast-grid";
+@import "podcast-details";
+@import "episode-details";
+@import "episode-list";
+@import "player";
+@import "mini-player";
+@import "maxi-player";
+@import "login";

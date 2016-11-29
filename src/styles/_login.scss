@@ -1,13 +1,28 @@
 .login-container {
-  max-width: 25rem;
-  margin: auto;
-  padding-top: 5rem;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 2rem;
-
-  img {
-    max-width: 202px;
-    margin-top: 1rem;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  @media (min-width: $open-menu-breakpoint) {
+    margin-left: $side-menu-width;
+  }
+  .login {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 1.5rem;
+      max-width: 30rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    img {
+      @extend .z-depth-2;
+      max-width: 210px;
+      margin-bottom: 1rem;
+    }
   }
 }

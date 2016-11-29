@@ -1,0 +1,32 @@
+.podcast-grid {
+  margin-top: $navbar-height-mobile;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .podcast {
+    width: calc(100% / 3);
+    padding: .1%;
+    height: 100%;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: bottom;
+    }
+  }
+}
+@media #{$medium-and-up} {
+  .podcast-grid {
+    margin-top: $navbar-height;
+    .podcast {
+      width: 25%;
+    }
+  }
+}
+@media #{$large-and-up} {
+  .podcast-grid {
+    .podcast {
+      width: 20%;
+    }
+  }
+}
