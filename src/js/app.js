@@ -10,6 +10,9 @@ $(function() {
     $('.nav-wrapper').removeClass('search-open');
     $('.nav-search input').val('');
   });
+  $('#back-button').click(function() {
+    window.history.back();
+  });
 
   /*
    * Side-menu JS
@@ -68,11 +71,16 @@ $(function() {
 
   $('.play-button').click(function() {
     $(this.parentElement).find('.play-button').toggleClass("hidden");
+    $('#player').addClass('mini');
   });
 
   $('.secondary-content').click(function() {
     $('.episode-options').addClass('hidden');
     $(this.parentElement).find('.episode-options').removeClass('hidden');
+  });
+
+  $('.collection-item .title').click(function() {
+    window.location.href = '/episode.html';
   });
 
   var subscribe = $('.subscribe-button.subscribe');
