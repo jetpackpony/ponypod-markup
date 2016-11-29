@@ -22,11 +22,11 @@ playedEpisodeOptions:
 miniPlayer: false
 maxiPlayer: false
 ---
-<div class="row">
-  <div class="col s12">
+<div class="flex-row">
+  <div class="flex-col sm12 md8 lg5">
     {{> podcast-details podcast=podcast}}
   </div>
-  <div class="col s12">
+  <div class="flex-col sm12 md8 lg5">
     {{> episode-list
     title="New Episodes"
     dimmed=false
@@ -34,7 +34,7 @@ maxiPlayer: false
     episodeOptions=newEpisodeOptions
     }}
   </div>
-  <div class="col s12">
+  <div class="flex-col sm12 md8 lg5">
     {{> episode-list
     title="Played Episodes"
     dimmed=true

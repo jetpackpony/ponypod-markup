@@ -45,6 +45,24 @@ $thumb-inner-size: 1rem;
     }
 
   }
+
+  @media (max-height: 20rem) {
+    header {
+      .title {
+        h2 {
+          font-size: 1.3rem;
+        }
+        .secondary {
+          display: none;
+        }
+      }
+      .collapse-button {
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
   .playback-progress {
     padding: .5rem;
     .time {

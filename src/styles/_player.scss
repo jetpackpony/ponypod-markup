@@ -1,5 +1,5 @@
 #player {
-  @extend .z-depth-2-up;
+  @extend .z-depth-1-up;
   visibility: visible;
   position: fixed;
   left: 0;
@@ -8,6 +8,9 @@
   transition: height .3s;
   background-color: #fff;
   z-index: 888;
+  @media (min-width: $open-menu-breakpoint) {
+    left: $side-menu-width;
+  }
 
   &.hidden {
     display: none;
@@ -18,13 +21,13 @@
   }
 
   &.maxi {
-    height: calc(100% - 6rem);
+    height: calc(100% - #{$maxi-player-top});
     .maxi-player {
       display: flex;
     }
   }
   &.mini {
-    height: $navbar-height-mobile + $mini-progress-height;
+    height: $mini-player-height;
     .mini-player {
       display: flex;
     }

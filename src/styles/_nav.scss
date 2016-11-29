@@ -4,7 +4,14 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  width: inherit;
   z-index: 777;
+  @media (min-width: $open-menu-breakpoint) {
+    left: $side-menu-width;
+    a#toggle-menu {
+      visibility: hidden;
+    }
+  }
 
   .nav-wrapper {
     display: flex;

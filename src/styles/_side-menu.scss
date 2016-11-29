@@ -1,14 +1,17 @@
 aside {
-  @extend .z-depth-4;
+  @extend .z-depth-1;
   position: fixed;
   top: 0;
   bottom: 0;
   left: $side-menu-width * -1 - 1;
-  width: 75%;
+  width: 65%;
   max-width: $side-menu-width;
   z-index: 999;
   background-color: #fff;
   transition: left .3s;
+  @media (min-width: $open-menu-breakpoint) {
+    left: 0;
+  }
 
   header {
     height: $navbar-height-mobile;
@@ -40,6 +43,4 @@ aside {
       color: rgba(#000, .87);
     }
   }
-
 }
-
