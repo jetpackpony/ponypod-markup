@@ -1,4 +1,4 @@
-body {
+#app-container {
   background-color: rgba(#000,.1);
 }
 .row .col {
@@ -30,7 +30,7 @@ body {
   cursor: pointer;
 }
 
-body.menu-open {
+#app-container.menu-open {
   #body-shadow {
     visibility: visible;
     opacity: 1;

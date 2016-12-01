@@ -27,29 +27,29 @@ $(function() {
       return;
     }
     if(dx < 0){
-      $('body').removeClass('menu-open');
+      $('#app-container').removeClass('menu-open');
     } else {
-      $('body').addClass('menu-open');
+      $('#app-container').addClass('menu-open');
     }
   };
   var onTouchEnd = function() {
-    $('body').unbind('touchmove', onTouchMove);
-    $('body').unbind('touchend', onTouchEnd);
+    $('#app-container').unbind('touchmove', onTouchMove);
+    $('#app-container').unbind('touchend', onTouchEnd);
   };
-  $('body').on('touchstart', function(e) {
+  $('#app-container').on('touchstart', function(e) {
     if (e.touches[0].pageX < 50 && !menuOpen()) {
       startTouch = e.touches[0].pageX;
-      $('body').on('touchmove', onTouchMove);
-      $('body').on('touchend', onTouchEnd);
+      $('#app-container').on('touchmove', onTouchMove);
+      $('#app-container').on('touchend', onTouchEnd);
     }
   });
 
   $('#body-shadow').on('click', function() {
-    $('body').removeClass('menu-open');
+    $('#app-container').removeClass('menu-open');
   });
   $('#toggle-menu').on('click', function() {
     if (!menuOpen()) {
-      $('body').addClass('menu-open');
+      $('#app-container').addClass('menu-open');
     }
   });
 
