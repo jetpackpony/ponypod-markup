@@ -9,9 +9,7 @@ aside {
   z-index: 999;
   background-color: #fff;
   transition: left .3s;
-  @media (min-width: $open-menu-breakpoint) {
-    left: 0;
-  }
+  // _media-queries
 
   header {
     height: $navbar-height-mobile;
@@ -22,11 +20,7 @@ aside {
     border-bottom: 1px solid rgba(#000,.15);
     color: color($secondary, "darken-4");
   }
-  @media #{$medium-and-up} {
-    header {
-      height: $navbar-height;
-    }
-  }
+  // _media-queries
 
   .nav li {
     height: 3rem;

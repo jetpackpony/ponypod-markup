@@ -15,18 +15,4 @@
     }
   }
 }
-@media #{$medium-and-up} {
-  .podcast-grid {
-    margin-top: $navbar-height;
-    .podcast {
-      width: 25%;
-    }
-  }
-}
-@media #{$large-and-up} {
-  .podcast-grid {
-    .podcast {
-      width: 20%;
-    }
-  }
-}
+// _media-queries

@@ -32,11 +32,7 @@ $thumb-inner-size: 1rem;
       overflow: hidden;
       margin-top: 0;
     }
-    @media (max-height: 35rem) {
-      p {
-        display: none;
-      }
-    }
+    // _media-queries
     .actions {
       text-align: center;
       .btn-flat {
@@ -45,24 +41,8 @@ $thumb-inner-size: 1rem;
     }
 
   }
+  // _media-queries
 
-  @media (max-height: 20rem) {
-    header {
-      .title {
-        h2 {
-          font-size: 1.3rem;
-        }
-        .secondary {
-          display: none;
-        }
-      }
-      .collapse-button {
-        i {
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
   .playback-progress {
     padding: .5rem;
     .time {

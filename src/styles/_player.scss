@@ -8,9 +8,8 @@
   transition: height .3s;
   background-color: #fff;
   z-index: 888;
-  @media (min-width: $open-menu-breakpoint) {
-    left: $side-menu-width;
-  }
+
+  // _media-queries
 
   &.hidden {
     display: none;

@@ -5,9 +5,8 @@
   left: 0;
   right: 0;
   background-color: #fff;
-  @media (min-width: $open-menu-breakpoint) {
-    margin-left: $side-menu-width;
-  }
+  // _media-queries
+
   .login {
     margin-top: 10rem;
     display: flex;
