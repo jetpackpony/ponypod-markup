@@ -69,9 +69,19 @@ $(function() {
   /*
    * Podcast page
    */
-  $('#read-more, #read-less').click(function() {
-    $('.podcast-description').toggleClass('full-description');
-    $('.podcast-action').toggleClass('full-description');
+  $('.podcast-description .description').css('display', 'none');
+  $('.podcast-action #read-less').css('display', 'none');
+  $('#read-more').click(function() {
+    $('.podcast-description .description').css('display', 'block');
+    $('.podcast-description .summary').css('display', 'none');
+    $('.podcast-action #read-more').css('display', 'none');
+    $('.podcast-action #read-less').css('display', 'block');
+  });
+  $('#read-less').click(function() {
+    $('.podcast-description .description').css('display', 'none');
+    $('.podcast-description .summary').css('display', 'block');
+    $('.podcast-action #read-more').css('display', 'block');
+    $('.podcast-action #read-less').css('display', 'none');
   });
 
   $('.play-button').click(function() {

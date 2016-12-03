@@ -8,29 +8,15 @@
     }
 
   }
-  .card-action {
-    text-align: center;
-    a#read-more, a#read-less {
-      color: color($secondary, "darken-2");
-    }
-  }
 
   .podcast-description {
     @extend .card-content;
-    .description { display: none; }
-    .summary { display: block; }
-    &.full-description {
-      .description { display: block; }
-      .summary { display: none; }
-    }
   }
   .podcast-action {
     @extend .card-action;
-    #read-more { display: block; }
-    #read-less { display: none; }
-    &.full-description {
-      #read-more { display: none; }
-      #read-less { display: block; }
+    text-align: center;
+    a {
+      color: color($secondary, "darken-2");
     }
   }
 }
