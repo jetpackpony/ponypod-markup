@@ -3,16 +3,17 @@
     <ul class="collection with-header">
       <li class="collection-header"><h4>{{title}}</h4></li>
       {{#each episodes as |ep|}}
-        <li class="collection-item avatar">
+        <li class="episode collection-item avatar">
           <a href="#!" class="play-button">
             <i class="material-icons">play_arrow</i>
           </a>
           <a href="#!" class="play-button hidden">
             <i class="material-icons">pause</i>
           </a>
-          <div class="title">{{ep.title}}
-          <p class="secondary">{{ep.date}}</p>
-</div>
+          <div class="title">
+            <span>{{ep.title}}</span>
+            <p class="secondary">{{ep.date}}</p>
+          </div>
           <a href="#!" class="secondary-content">
             <i class="material-icons">more_vert</i>
           </a>
