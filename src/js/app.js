@@ -94,10 +94,6 @@ $(function() {
     $(this.parentElement).find('.episode-options').removeClass('hidden');
   });
 
-  $('.collection-item .title').click(function() {
-    window.location.href = '/episode.html';
-  });
-
   var subscribe = $('.subscribe-button.subscribe');
   var unsubscribe = $('.subscribe-button.unsubscribe');
   subscribe.tooltip({
@@ -118,7 +114,6 @@ $(function() {
     Materialize.toast('Removed from My Podcasts', 4000);
     $('.subscribe-button').toggleClass('hidden');
   });
-
 
   /*
    * Player things
