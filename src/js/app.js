@@ -85,7 +85,7 @@ $(function() {
   });
 
   $('.play-button').click(function() {
-    $(this.parentElement).find('.play-button').toggleClass("hidden");
+    $(this.parentElement).toggleClass("playing");
     $('#player').addClass('mini');
   });
 
